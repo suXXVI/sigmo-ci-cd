@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sigmo CI/CD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <h1>Sigmo CI/CD</h1>
+        <p class="tagline">
+          A hands-on introduction to Continuous Integration and Continuous
+          Delivery using GitHub Actions and modern deployment practices.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>What Is CI/CD?</h2>
+        <p>
+          <strong>Continuous Integration (CI)</strong> is the practice of
+          automatically building and testing code every time a change is pushed
+          to a repository. This catches bugs early and ensures the codebase
+          stays in a working state at all times.
+        </p>
+        <p>
+          <strong>Continuous Delivery (CD)</strong> takes it a step further —
+          once code passes CI, it is automatically packaged and deployed to a
+          staging or production environment. This eliminates manual deployment
+          steps and makes shipping software faster and more reliable.
+        </p>
+        <div class="pipeline">
+          <div class="pipeline-step">Write Code</div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">Push to GitHub</div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">Tests Run</div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">Code Deployed</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>What You'll Learn</h2>
+        <ul>
+          <li>What CI/CD is and why it matters</li>
+          <li>How to write and run automated tests</li>
+          <li>How to set up GitHub Actions workflows</li>
+          <li>How to automate deployments using GitHub Actions</li>
+          <li>How to deploy a production-ready web application to the internet</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Prerequisites</h2>
+        <ul>
+          <li>Basic understanding of Git and GitHub</li>
+          <li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+          <li>A terminal (Mac/Linux) or WSL 2 on Windows</li>
+        </ul>
+        <div class="notice">
+          <strong>Windows users:</strong> This course requires a Unix-like
+          terminal. Make sure you have
+          
+            href="https://docs.microsoft.com/en-us/windows/wsl/install"
+            target="_blank"
+            >WSL 2</a
+          >
+          installed before getting started.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Getting Started</h2>
+        <p>
+          Fork this repository by clicking the <strong>Fork</strong> button at
+          the top right of the GitHub page, then clone it to your local machine:
+        </p>
+        <div class="code-block">
+          <code>git clone https://github.com/YOUR_USERNAME/sigmo-ci-cd</code>
+          <br />
+          <code>cd sigmo-ci-cd</code>
+        </div>
+        <p>Then follow along with the course lessons on Sigmo.</p>
+      </section>
+
+      <section class="card">
+        <h2>Repository Structure</h2>
+        <div class="code-block">
+          <code>sigmo-ci-cd/</code><br />
+          <code>&nbsp;├── .github/</code><br />
+          <code>&nbsp;│&nbsp;&nbsp; └── workflows/&nbsp;&nbsp;&nbsp;# GitHub Actions CI/CD workflow files</code><br />
+          <code>&nbsp;├── index.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main HTML page</code><br />
+          <code>&nbsp;├── style.css&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Stylesheet</code><br />
+          <code>&nbsp;└── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project documentation</code>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Part of the <a href="https://sigmo.com" target="_blank">Sigmo</a>
+        learning platform. Open source under the MIT License.
+      </p>
+    </footer>
+  </body>
+</html>
