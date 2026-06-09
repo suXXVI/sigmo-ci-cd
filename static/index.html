@@ -64,7 +64,7 @@
         <div class="notice">
           <strong>Windows users:</strong> This course requires a Unix-like
           terminal. Make sure you have
-          
+          <a
             href="https://docs.microsoft.com/en-us/windows/wsl/install"
             target="_blank"
             >WSL 2</a
@@ -93,10 +93,20 @@
           <code>sigmo-ci-cd/</code><br />
           <code>&nbsp;├── .github/</code><br />
           <code>&nbsp;│&nbsp;&nbsp; └── workflows/&nbsp;&nbsp;&nbsp;# GitHub Actions CI/CD workflow files</code><br />
-          <code>&nbsp;├── index.html&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main HTML page</code><br />
-          <code>&nbsp;├── style.css&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Stylesheet</code><br />
+          <code>&nbsp;├── static/</code><br />
+          <code>&nbsp;│&nbsp;&nbsp; ├── index.html&nbsp;&nbsp;&nbsp;# Main HTML page</code><br />
+          <code>&nbsp;│&nbsp;&nbsp; └── style.css&nbsp;&nbsp;&nbsp;&nbsp;# Stylesheet</code><br />
+          <code>&nbsp;├── migrations/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Database migration files</code><br />
+          <code>&nbsp;├── server.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Node.js backend server</code><br />
+          <code>&nbsp;├── package.json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Node.js dependencies</code><br />
+          <code>&nbsp;├── Dockerfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Docker image definition</code><br />
           <code>&nbsp;└── README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project documentation</code>
         </div>
+      </section>
+
+      <section class="card">
+        <h2>Visitor Count</h2>
+        <p>This page has been visited <span id="visitor-count">...</span> times.</p>
       </section>
     </main>
 
@@ -106,5 +116,16 @@
         learning platform. Open source under the MIT License.
       </p>
     </footer>
+
+    <script>
+      fetch('/api/count')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('visitor-count').textContent = data.count;
+        })
+        .catch(() => {
+          document.getElementById('visitor-count').textContent = 'unavailable';
+        });
+    </script>
   </body>
 </html>
